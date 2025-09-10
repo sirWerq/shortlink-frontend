@@ -22,7 +22,7 @@ function App() {
                 `https://${
                     import.meta.env.VITE_BACKEND_BASE_URL
                 }/create-shortlink`,
-                { url: dataForm }
+                { url: dataForm, withCredentials: true }
             );
             if (response.data) {
                 setData(response.data.data);
